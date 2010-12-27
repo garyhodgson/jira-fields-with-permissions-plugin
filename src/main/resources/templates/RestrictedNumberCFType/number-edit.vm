@@ -1,0 +1,6 @@
+#if($editable)
+	#parse("templates/plugins/fields/edit/edit-number.vm")
+#else
+	<input type="hidden" name="$customField.id" id="$customField.id" value="123456.123" />
+#end
+

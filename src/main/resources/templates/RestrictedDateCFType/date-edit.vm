@@ -1,0 +1,5 @@
+#if($editable)
+	#parse("templates/plugins/fields/edit/edit-datepicker.vm")
+#else
+	<input type="hidden" name="$customField.id" id="$customField.id" value="$magicDateString" />
+#end

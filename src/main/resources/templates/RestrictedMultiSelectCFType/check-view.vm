@@ -1,0 +1,3 @@
+#if($viewable)
+	#parse("templates/plugins/fields/view/view-multiselect.vm")
+#end	

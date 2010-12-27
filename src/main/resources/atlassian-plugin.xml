@@ -1,0 +1,229 @@
+
+<atlassian-plugin key="flrestrictedfieldsbybalaram" name="Fields with Security Levels By Balaram">
+    <plugin-info>
+        <description>Fields with Security Levels by Balaram</description>
+        <version>2.0</version>
+        <application-version min="4.0" max="4.1"/>
+        <vendor name="Balaram" url="http://bandibalaram.blogspot.com"/>
+    </plugin-info>
+        
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedTextCFType" name="Fiberlink Restricted Text Field (&lt; 255 characters)"
+    class="com.fiberlink.jira.plugin.customfields.RestrictedTextCFType">
+        <description>A basic single line Restricted text box custom field to allow simple text input</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedTextCFType/RestrictedTextCFType-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedTextCFType/RestrictedTextCFType-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedTextCFType/RestrictedTextCFType-xml.vm"/>
+    </customfield-type>
+
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedTextAreaCFType" name="Fiberlink Restricted Free Text Field (unlimited text)"
+        class="com.fiberlink.jira.plugin.customfields.RestrictedTextAreaCFType">
+        <description>A multiline Restricted text area custom field to allow input of longer text strings.</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedTextAreaCFType/RestrictedTextAreaCFType-view.vm"/>
+        <resource type="velocity" name="column-view" location="templates/RestrictedTextCFType/RestrictedTextCFType-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedTextAreaCFType/RestrictedTextAreaCFType-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedTextAreaCFType/RestrictedTextAreaCFType-xml.vm"/>
+    </customfield-type>
+
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedSelectCFType.select" name="Fiberlink Restricted Select List"
+        class="com.fiberlink.jira.plugin.customfields.RestrictedSelectCFType">
+        <description>A Restricted single select list with a configurable list of options.</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedSelectCFType/select-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedSelectCFType/select-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedSelectCFType/select-xml.vm"/>
+    </customfield-type>
+
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedSelectCFType.radiobuttons" name="Fiberlink Restricted Radio Buttons"
+        class="com.fiberlink.jira.plugin.customfields.RestrictedSelectCFType">
+        <description>A restricted list of radio buttons</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedSelectCFType/radio-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedSelectCFType/radio-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedSelectCFType/radio-xml.vm"/>
+    </customfield-type>
+
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedMultiSelectCFType.multiselect" name="Fiberlink Restricted Multi Select"
+        class="com.fiberlink.jira.plugin.customfields.RestrictedMultiSelectCFType">
+        <description>Choose multiple values in a select list.</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedMultiSelectCFType/select-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedMultiSelectCFType/select-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedMultiSelectCFType/select-xml.vm"/>
+
+    </customfield-type>
+
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedMultiSelectCFType.multicheckboxes" name="Fiberlink Restricted Multi Checkboxes"
+        class="com.fiberlink.jira.plugin.customfields.RestrictedMultiSelectCFType">
+        <description>Choose multiple values using checkboxes.</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedMultiSelectCFType/check-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedMultiSelectCFType/check-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedMultiSelectCFType/check-xml.vm"/>
+
+    </customfield-type>
+
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedUserCFType" name="Fiberlink Restricted User Picker"
+        class="com.fiberlink.jira.plugin.customfields.RestrictedUserCFType">
+        <description>Choose a user from the user base via a popup picker window.</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedUserCFType/user-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedUserCFType/user-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedUserCFType/user-xml.vm"/>
+    </customfield-type>
+
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedMultiUserCFType" name="Fiberlink Restricted Multi User Picker"
+        class="com.fiberlink.jira.plugin.customfields.RestrictedMultiUserCFType">
+        <description>Choose multiple users from the user base via a popup picker window.</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedMultiUserCFType/multiuser-view.vm"/>
+        <resource type="velocity" name="column-view" location="templates/RestrictedMultiUserCFType/multiuser-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedMultiUserCFType/multiuser-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedMultiUserCFType/multiuser-xml.vm"/>
+    </customfield-type>
+
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedNumberCFType" name="Fiberlink Restricted Number Field"
+        class="com.fiberlink.jira.plugin.customfields.RestrictedNumberCFType">
+        <description>A custom field that stores and validates numeric (floating point) input.</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedNumberCFType/number-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedNumberCFType/number-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedNumberCFType/number-xml.vm"/>
+    </customfield-type>
+
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedDateCFType" name="Fiberlink Restricted Date Picker"
+        class="com.fiberlink.jira.plugin.customfields.RestrictedDateCFType">
+        <description>A custom field that stores dates &amp; uses a date picker to view them</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedDateCFType/date-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedDateCFType/date-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedDateCFType/date-xml.vm"/>
+    </customfield-type>
+
+    <customfield-type key="com.fiberlink.jira.plugin.customfields.RestrictedDateTimeCFType" name="Fiberlink Restricted Date Time"
+        class="com.fiberlink.jira.plugin.customfields.RestrictedDateTimeCFType">
+        <description>A custom field that stores dates with a time component</description>
+
+        <resource type="velocity" name="view" location="templates/RestrictedDateTimeCFType/datetime-view.vm"/>
+        <resource type="velocity" name="edit" location="templates/RestrictedDateTimeCFType/datetime-edit.vm"/>
+        <resource type="velocity" name="xml" location="templates/RestrictedDateTimeCFType/datetime-xml.vm"/>
+    </customfield-type>
+
+    <customfield-searcher key="textsearcher" name="Free Text Searcher"
+        i18n-name-key="admin.customfield.searcher.textsearcher.name"
+        class="com.atlassian.jira.issue.customfields.searchers.TextSearcher">
+        <description key="admin.customfield.searcher.textsearcher.desc">Search for values using a free text search.</description>
+
+        <resource type="velocity" name="search" location="templates/plugins/fields/edit-searcher/search-basictext.vm"/>
+        <resource type="velocity" name="view" location="templates/plugins/fields/view-searcher/view-searcher-basictext.vm"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedTextCFType"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedTextAreaCFType"/>
+    </customfield-searcher>
+
+    <customfield-searcher key="exactnumber" name="Number Searcher"
+        i18n-name-key="admin.customfield.searcher.exactnumber.name"
+        class="com.atlassian.jira.issue.customfields.searchers.ExactNumberSearcher">
+        <description key="admin.customfield.searcher.exactnumber.desc">Allow searching for a number which exactly matches.</description>
+
+        <resource type="velocity" name="search" location="templates/plugins/fields/edit-searcher/search-basictext.vm"/>
+        <resource type="velocity" name="view" location="templates/plugins/fields/view-searcher/view-searcher-basictext.vm"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedNumberCFType"/>
+    </customfield-searcher>
+
+    <customfield-searcher key="numberrange" name="Number range searcher"
+        i18n-name-key="admin.customfield.searcher.numberrange.name"
+        class="com.atlassian.jira.issue.customfields.searchers.NumberRangeSearcher">
+        <description key="admin.customfield.searcher.numberrange.desc">Allow searching for a number that is in a given range</description>
+
+        <resource type="velocity" name="search" location="templates/plugins/fields/edit-searcher/search-number-range.vm"/>
+        <resource type="velocity" name="view" location="templates/plugins/fields/view-searcher/view-searcher-number-range.vm"/>
+
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedNumberCFType"/>
+    </customfield-searcher>
+
+    <customfield-searcher key="selectsearcher" name="Select List Searcher"
+        i18n-name-key="admin.customfield.searcher.selectsearcher.name"
+        class="com.atlassian.jira.issue.customfields.searchers.SelectSearcher">
+        <description key="admin.customfield.searcher.selectsearcher.desc">Search for values using a select list.</description>
+
+        <resource type="velocity" name="search" location="templates/plugins/fields/edit-searcher/search-select.vm"/>
+        <resource type="velocity" name="view" location="templates/plugins/fields/view-searcher/view-searcher-basictext.vm"/>
+        <resource type="velocity" name="label" location="templates/plugins/fields/view-searcher/label-searcher-basictext.vm"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedSelectCFType.select"/>
+
+    </customfield-searcher>
+
+    <customfield-searcher key="radiosearcher" name="Radio Button Searcher"
+        i18n-name-key="admin.customfield.searcher.radiosearcher.name"
+        class="com.atlassian.jira.issue.customfields.searchers.SelectSearcher">
+        <description key="admin.customfield.searcher.radiosearcher.desc">Search for values using radio buttons</description>
+
+        <resource type="velocity" name="search" location="templates/searchers/search-radio.vm"/>
+        <resource type="velocity" name="view" location="templates/searchers/view-searcher-basictext.vm"/>
+        <resource type="velocity" name="label" location="templates/searchers/label-searcher-basictext.vm"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedSelectCFType.radiobuttons"/>
+    </customfield-searcher>
+
+    <customfield-searcher key="multiselectsearcher" name="Multi Select Searcher"
+        i18n-name-key="admin.customfield.searcher.multiselectsearcher.name"
+        class="com.atlassian.jira.issue.customfields.searchers.MultiSelectSearcher">
+        <description key="admin.customfield.searcher.multiselectsearcher.desc">Search for multiple values using a single select list.</description>
+
+        <resource type="velocity" name="search" location="templates/plugins/fields/edit-searcher/search-multiselect.vm"/>
+        <resource type="velocity" name="view" location="templates/plugins/fields/view-searcher/view-searcher-multioption.vm"/>
+        <resource type="velocity" name="label" location="templates/plugins/fields/view-searcher/label-searcher-htmltext.vm"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedMultiSelectCFType.multiselect"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedSelectCFType.select"/>
+    </customfield-searcher>
+
+    <customfield-searcher key="checkboxsearcher" name="Multi Checkbox Searcher"
+        i18n-name-key="admin.customfield.searcher.checkboxsearcher.name"
+        class="com.atlassian.jira.issue.customfields.searchers.MultiSelectSearcher">
+        <description key="admin.customfield.searcher.checkboxsearcher.desc">Search for multiple values using check boxes.</description>
+
+        <resource type="velocity" name="search" location="templates/plugins/fields/edit/edit-multicheckboxes.vm"/>
+        <resource type="velocity" name="view" location="templates/plugins/fields/view-searcher/view-searcher-multioption.vm"/>
+        <resource type="velocity" name="label" location="templates/plugins/fields/view-searcher/label-searcher-basictext.vm"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedMultiSelectCFType.multicheckboxes"/>
+    </customfield-searcher>
+
+    <customfield-searcher key="userpickersearcher" name="User Picker Searcher"
+        i18n-name-key="admin.customfield.searcher.userpickersearcher.name"
+        class="com.atlassian.jira.issue.customfields.searchers.UserPickerSearcher">
+        <description key="admin.customfield.searcher.userpickersearcher.desc">Allow to search for a user using a userpicker.</description>
+        <resource type="velocity" name="label" location="templates/plugins/fields/view-searcher/label-searcher-user.vm"/>
+        <resource type="velocity" name="search" location="templates/plugins/fields/edit-searcher/search-userpicker.vm"/>
+        <resource type="velocity" name="view" location="templates/plugins/fields/view-searcher/view-searcher-basictext.vm"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedUserCFType"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedMultiUserCFType"/>
+    </customfield-searcher>
+
+    <customfield-searcher key="userpickergroupsearcher" name="User Picker &amp; Group Searcher"
+        i18n-name-key="admin.customfield.searcher.userpickergroupsearcher.name"
+        class="com.atlassian.jira.issue.customfields.searchers.UserPickerGroupSearcher">
+        <description key="admin.customfield.searcher.userpickergroupsearcher.desc">Allow to search for a user using a userpicker or a list of users groups.</description>
+
+        <resource type="velocity" name="search" location="templates/plugins/fields/edit-searcher/search-groupdropdown.vm" />
+        <resource type="velocity" name="label"
+                  location="templates/plugins/fields/view-searcher/label-searcher-user.vm"/>
+        
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedUserCFType"/>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedMultiUserCFType"/>
+    </customfield-searcher>
+	
+    <customfield-searcher key="daterange" name="Date Range Picker"
+        i18n-name-key="admin.customfield.searcher.daterange.name"
+        class="com.atlassian.jira.issue.customfields.searchers.DateRangeSearcher">
+        <description key="admin.customfield.searcher.daterange.desc">Allow searching for a date that is between two other dates</description>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedDateCFType"/>
+    </customfield-searcher>
+
+    <customfield-searcher key="datetimerange" name="Date Time Range Picker"
+        i18n-name-key="admin.customfield.searcher.datetimerange.name"
+        class="com.atlassian.jira.issue.customfields.searchers.DateTimeRangeSearcher">
+        <description key="admin.customfield.searcher.datetimerange.desc">Allow searching for a date and time that is between two other dates and times</description>
+        <valid-customfield-type package="flrestrictedfieldsbybalaram" key="com.fiberlink.jira.plugin.customfields.RestrictedDateTimeCFType"/>
+    </customfield-searcher>
+    
+</atlassian-plugin>
